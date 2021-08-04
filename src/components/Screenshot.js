@@ -3,29 +3,33 @@ import Slider from "react-slick";
 
 const ScreenShot = () => {
   useEffect(() => {
-    let timer= setTimeout(function () {
+    let timer = setTimeout(function () {
       document.querySelector(".loader-wrapper").style = "display: none";
     }, 2000);
-    return () =>{ clearTimeout(timer)}
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
-  const [bgImg, setBgImg]= useState({
-    backgroundImage:`url(${process.env.PUBLIC_URL}/assets/images/screenshot-bg.png)`
+  const [bgImg, setBgImg] = useState({
+    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/screenshot-bg.png)`,
   });
 
-  const color= localStorage.getItem("color");
+  const color = localStorage.getItem("color");
 
-  useEffect(()=>{    
-    if(color === "color-1")
-     setBgImg( {
-      backgroundImage:`url(${process.env.PUBLIC_URL}/assets/images/screenshot-bg.png)`
-    });
-    else if(color === "color-2")
-    setBgImg({ backgroundImage:`url(${process.env.PUBLIC_URL}/assets/images/color/color-2/screenshot-bg.png)`
-	})
-    else 
-    setBgImg({backgroundImage:`url(${process.env.PUBLIC_URL}/assets/images/color/color-3/screenshot-bg.png)`
-	})
-  },[color]);
+  useEffect(() => {
+    if (color === "color-1")
+      setBgImg({
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/screenshot-bg.png)`,
+      });
+    else if (color === "color-2")
+      setBgImg({
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/color/color-2/screenshot-bg.png)`,
+      });
+    else
+      setBgImg({
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/color/color-3/screenshot-bg.png)`,
+      });
+  }, [color]);
 
   const options = {
     arrows: false,
@@ -44,7 +48,7 @@ const ScreenShot = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '110px',
+          centerPadding: "110px",
         },
       },
       {
@@ -53,7 +57,7 @@ const ScreenShot = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '0',
+          centerPadding: "0",
         },
       },
       {
@@ -62,7 +66,7 @@ const ScreenShot = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '132px',
+          centerPadding: "132px",
         },
       },
       {
@@ -71,7 +75,7 @@ const ScreenShot = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '132px',
+          centerPadding: "132px",
         },
       },
       {
@@ -80,30 +84,47 @@ const ScreenShot = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '50px',
+          centerPadding: "50px",
         },
-      }
+      },
     ],
   };
 
   return (
-    <section id="screenshot" className="screenshot padding-top-bottom" style={bgImg}>
+    <section
+      id="screenshot"
+      className="screenshot padding-top-bottom"
+      style={bgImg}
+    >
       <div className="screenshot-decor">
         <div className="screenshot-circle1">
-          <img src={`${process.env.PUBLIC_URL}/assets/images/feature-circle-two.png`} alt="feature-circle-two" />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/images/feature-circle-two.png`}
+            alt="feature-circle-two"
+          />
         </div>
         <div className="screenshot-circle2">
-          <img src={`${process.env.PUBLIC_URL}/assets/images/feature-circle.png`} alt="feature-circle" />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/images/feature-circle.png`}
+            alt="feature-circle"
+          />
         </div>
         <div className="screenshot-circle3">
-          <img src={`${process.env.PUBLIC_URL}/assets/images/main-banner1.png`} alt="feature-circle-three" />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/images/main-banner1.png`}
+            alt="feature-circle-three"
+          />
         </div>
       </div>
       <div className="container">
         <div className="row">
           <div className="col-sm-12 ">
             <div className="screenshot-contain">
-              <img className="mobile-light-left" src={`${process.env.PUBLIC_URL}/assets/images/light.png`} alt="light" />
+              <img
+                className="mobile-light-left"
+                src={`${process.env.PUBLIC_URL}/assets/images/light.png`}
+                alt="light"
+              />
               <img
                 className="mob-mocup img-fluid"
                 src={`${process.env.PUBLIC_URL}/assets/images/screenshot-mob.png`}
@@ -114,42 +135,83 @@ const ScreenShot = () => {
                 src={`${process.env.PUBLIC_URL}/assets/images/light-right.png`}
                 alt="light-right"
               />
-              <Slider
-                {...options}
-                className="screenshot-carousel slick-margin"
-              >
+              <Slider {...options} className="screenshot-carousel slick-margin">
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/2.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/2.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/3.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/3.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/4.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/4.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/5.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/5.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/6.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/6.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/7.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/7.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/8.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/8.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/9.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/9.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/10.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/10.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/11.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/11.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="screenshot-item">
-                  <img src={`${process.env.PUBLIC_URL}/assets/images/app/1.jpg`} alt="app" className="img-fluid" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/images/app/1.jpg`}
+                    alt="app"
+                    className="img-fluid"
+                  />
                 </div>
               </Slider>
             </div>

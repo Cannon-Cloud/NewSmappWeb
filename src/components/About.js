@@ -116,19 +116,11 @@ const About = () => {
                           </div>
                         </div>
                         <div className="about-text">
-                          <h3>SEO Friendly</h3>
+                          <h3>Integration</h3>
                         </div>
                       </li>
                     </ul>
                   </div>
-                </div>
-                <div className="top-margin">
-                  <button
-                    type="button"
-                    className="btn btn-custom theme-color theme-color"
-                  >
-                    view more
-                  </button>
                 </div>
               </div>
             </div>
@@ -137,7 +129,7 @@ const About = () => {
             <div className="about-right">
               <div className="about-phone">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/aboutus.png`}
+                  src={`${process.env.PUBLIC_URL}/assets/images/aboutus-new.png`}
                   className="img-fluid"
                   alt="aboutus"
                 />

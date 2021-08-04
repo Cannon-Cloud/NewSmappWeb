@@ -8,8 +8,10 @@ import ScreenShot from "./components/Screenshot";
 // import Team from "./components/Team";
 import Price from "./components/Price";
 import Contact from "./components/Contact";
-import Subscribe from "./components/Subscribe";
+// import Subscribe from "./components/Subscribe";
 import Footer from "./components/Footer";
+import TypeForm from "./components/TypeForm";
+import TypeFormContat from "./components/TypeFormContact";
 // import CheckoutNew from "./components/CheckoutNew";
 // import Testimonial from "./components/Testimonial";
 
@@ -117,7 +119,7 @@ const HomeTwo = () => {
                     data-tilt-perspective="110"
                     data-tilt-speed="400"
                     data-tilt-max="1.2"
-                    src={`${process.env.PUBLIC_URL}/assets/images/home2/slider-caption.png`}
+                    src={`${process.env.PUBLIC_URL}/assets/images/home2/slider-caption-new.png`}
                     className="img-fluid"
                     alt="slider-caption"
                   />
@@ -151,10 +153,12 @@ const HomeTwo = () => {
       {/* <CheckoutNew /> */}
 
       {/*Contact Component*/}
-      <Contact />
+      {/*<Contact />*/}
 
       {/*Subscription Component*/}
-      <Subscribe />
+      {/*<Subscribe />*/}
+
+      <TypeForm />
 
       {/*Footer Component*/}
       <Footer />

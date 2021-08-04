@@ -43,7 +43,7 @@ const Feature = () => {
         <div className="row">
           <div className="feature-phone">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/images/222.png`}
+              src={`${process.env.PUBLIC_URL}/assets/images/222-new.png`}
               className="img-fluid"
               alt=""
             />
