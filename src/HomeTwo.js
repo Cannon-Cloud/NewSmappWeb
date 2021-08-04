@@ -7,11 +7,11 @@ import Feature from "./components/Feature";
 import ScreenShot from "./components/Screenshot";
 // import Team from "./components/Team";
 import Price from "./components/Price";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 // import Subscribe from "./components/Subscribe";
 import Footer from "./components/Footer";
 import TypeForm from "./components/TypeForm";
-import TypeFormContat from "./components/TypeFormContact";
+// import TypeFormContat from "./components/TypeFormContact";
 // import CheckoutNew from "./components/CheckoutNew";
 // import Testimonial from "./components/Testimonial";
 
